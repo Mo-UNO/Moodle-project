@@ -1,0 +1,42 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
+class CStudent
+{
+public:
+    CStudent();
+
+    // -------- getters -------- //
+    int getStudentId() const;
+    float getStudentScore() const;
+    const float *getStudentGrades() const;
+    const char *getStudentName() const;
+    const char *getStudentMajor() const;
+    const char *getStudentEmail() const;
+    const char *getStudentPassword() const;
+
+    // -------- setters -------- //
+    void setStudentId(const int);
+    void setStudentScore(const float);
+    void setStudentGrades(const float *);
+    void setStudentName(const char *);
+    void setStudentMajor(const char *);
+    void setStudentEmail(const char *);
+    void setStudentPassword(const char *);
+
+    // -------- helpers -------- //
+    void registerStudent();
+    void getStudentInfo();
+    void calculateGpa();
+
+private:
+    int m_studentId;
+    float m_studentScore;
+    float m_studentGrades[5];
+    char m_studentName[50];
+    char m_studentMajor[10];
+    char m_studentEmailUsername[10];
+    char m_studentEmailPassword[10];
+};
+
+#endif // STUDENT_H
