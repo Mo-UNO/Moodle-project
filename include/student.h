@@ -39,4 +39,20 @@ private:
     char m_studentEmailPassword[10];
 };
 
+class CPG_Student : public CStudent
+{
+public:
+    CPG_Student();
+    // -------- getters -------- //
+    const char *studentJobTitle() const;
+    // -------- setters -------- //
+    void setStudentJobTitle(const char *);
+    // -------- helpers -------- //
+    void registerStudent();
+    void getStudentInfo();
+
+private:
+    char m_pgStudentJobTitle[20];
+};
+
 #endif // STUDENT_H
