@@ -8,10 +8,10 @@ CStudent::CStudent()
       m_studentGrades{0},
       m_studentScore{0}
 {
-    m_studentName[0] = NULL;
-    m_studentEmailUsername[0] = NULL;
-    m_studentEmailPassword[0] = NULL;
-    m_studentMajor[0] = NULL;
+    m_studentName[0] = '\0';
+    m_studentEmailUsername[0] = '\0';
+    m_studentEmailPassword[0] = '\0';
+    m_studentMajor[0] = '\0';
 }
 
 // -------- getters -------- //
