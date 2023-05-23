@@ -1,5 +1,6 @@
+
 #include <iostream>
-#include "include/student.h"
+#include <vector>
 using namespace std;
 
 int main()
