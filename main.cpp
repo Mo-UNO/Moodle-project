@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "include/student.h"
+#include "src/student.cpp"
 using namespace std;
 
 int main()
@@ -11,7 +11,7 @@ int main()
     cout << "Enter the number of courses: ";
     cin >> n_courses;
     CStudent students[n_students];
-    // CCourse courses[n_courses];
+    CCourse courses[n_courses];
 
     // Register students
     for (int i = 0; i < n_students; i++)
@@ -26,6 +26,7 @@ int main()
     {
         cout << "############### Registering Course " << i + 1 << " ###############" << endl;
         fflush(stdin);
+        courses[i].addCourse();
     }
 
     // Display student information
@@ -40,5 +41,6 @@ int main()
     for (int i = 0; i < n_courses; i++)
     {
         cout << "Course #" << (i + 1) << endl;
+        courses[i].getCourseInfo();
     }
 }
