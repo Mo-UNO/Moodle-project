@@ -5,12 +5,16 @@ using namespace std;
 
 int main()
 {
-    int n_students, n_courses;
+    int n_students, n_pgstudents, n_courses;
     cout << "Enter the number of students: ";
     cin >> n_students;
+    cout << "Enter the number of postgradute students: ";
+    cin >> n_pgstudents;
     cout << "Enter the number of courses: ";
     cin >> n_courses;
+
     CStudent students[n_students];
+    CPG_Student pg_students[n_pgstudents];
     CCourse courses[n_courses];
 
     // Register students
@@ -19,6 +23,14 @@ int main()
         cout << "############### Registering Student " << i + 1 << " ###############" << endl;
         fflush(stdin);
         students[i].registerStudent();
+    }
+
+    // Register postgraduate students
+    for (int i = 0; i < n_pgstudents; i++)
+    {
+        cout << "############### Registering Post Graduate Student " << i + 1 << " ###############" << endl;
+        fflush(stdin);
+        pg_students[i].registerStudent();
     }
 
     // Register courses
@@ -34,6 +46,13 @@ int main()
     for (int i = 0; i < n_students; i++)
     {
         students[i].getStudentInfo();
+    }
+
+    // Display post graduate student information
+    cout << "############################### Post Graduate Student Information ###############################" << endl;
+    for (int i = 0; i < n_pgstudents; i++)
+    {
+        pg_students[i].getStudentInfo();
     }
 
     // Display course information
