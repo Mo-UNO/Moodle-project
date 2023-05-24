@@ -173,3 +173,56 @@ void CPG_Student::getStudentInfo()
     CStudent::getStudentInfo();
     std::cout << "Job title: " << m_pgStudentJobTitle << "\n";
 }
+
+
+ const char* CCourse::getCourseName()const{
+
+ return m_courseName;
+
+ }
+
+    const char* CCourse::getCourseCode()const{
+
+    return m_courseCode;
+
+    }
+    const float CCourse::getCourseCost()const{
+
+    return m_courseCost;
+
+    }
+    //setter
+    void CCourse::setCourseName(const char*newCourseName){
+
+    strcpy(m_courseName,newCourseName);
+
+    }
+    void CCourse::setCourseCode(const char*newCourseCode){
+
+    strcpy(m_courseCode,newCourseCode);
+    }
+    void CCourse::setCourseCost(const float newCourseCost){
+    m_courseCost=newCourseCost;
+
+    }
+
+    void CCourse::addCourse(){
+
+    std::cout<<"Enter Course Name: ";
+    std::cin.getline(m_courseName, 20);
+    fflush(stdin);
+    std::cout<<"Enter Course Code: ";
+    std::cin>>m_courseCode;
+    fflush(stdin);
+    std::cout<<"Enter Course Cost: ";
+    std::cin>>m_courseCost;
+    }
+    void CCourse::getCourseInfo(){
+    std::cout << "=================== COURSE INFO ===================\n";
+    std::cout<<"Course Name: "<<m_courseName<<std::endl;
+    std::cout<<"Course Code: "<<m_courseCode<<std::endl;
+    std::cout<<"Course Cost: "<<m_courseCost<<std::endl;
+
+
+    }
+
