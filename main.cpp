@@ -1,6 +1,7 @@
 
 #include <iostream>
-#include "src/student.cpp"
+#include "include/student.h"
+
 using namespace std;
 
 int main()
@@ -23,6 +24,7 @@ int main()
         cout << "############### Registering Student " << i + 1 << " ###############" << endl;
         fflush(stdin);
         students[i].registerStudent();
+        students[i].calculateGpa();
     }
 
     // Register postgraduate students
@@ -31,6 +33,7 @@ int main()
         cout << "############### Registering Post Graduate Student " << i + 1 << " ###############" << endl;
         fflush(stdin);
         pg_students[i].registerStudent();
+        pg_students[i].calculateGpa();
     }
 
     // Register courses
@@ -59,7 +62,6 @@ int main()
     cout << "=========================== Course Information ===========================" << endl;
     for (int i = 0; i < n_courses; i++)
     {
-        cout << "Course #" << (i + 1) << endl;
         courses[i].getCourseInfo();
     }
 }
