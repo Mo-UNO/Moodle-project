@@ -59,7 +59,7 @@ int main()
     }
 
     // Display course information
-    cout << "=========================== Course Information ===========================" << endl;
+    cout << "############################### Course Information ###############################" << endl;
     for (int i = 0; i < n_courses; i++)
     {
         courses[i].getCourseInfo();

@@ -57,20 +57,21 @@ private:
 class CCourse
 {
 public:
-    //getter
-    const char* getCourseName()const;
-    const char* getCourseCode()const;
-    const float getCourseCost()const;
-    //setter
-    void setCourseName(const char*);
-    void setCourseCode(const char*);
+    CCourse();
+    // getter
+    const char *getCourseName() const;
+    const char *getCourseCode() const;
+    const float getCourseCost() const;
+    // setter
+    void setCourseName(const char *);
+    void setCourseCode(const char *);
     void setCourseCost(const float);
     void addCourse();
     void getCourseInfo();
-   private:
+
+private:
     char m_courseName[20];
     char m_courseCode[5];
     float m_courseCost;
-
-} ;
+};
 #endif // STUDENT_H
